@@ -13,7 +13,7 @@ jobs:
       run: |
         dotnet restore /p:Configuration=Debug /p:Platform="Any CPU"
         MSBuild.exe PokeViewer.NET/PokeViewer.NET.csproj /p:Configuration=Debug
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v6
       with:
         name: PokeViewer for windows
         path: PokeViewer.NET/bin/Windows/Debug/net7.0-windows/win-x64
